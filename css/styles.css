@@ -1,0 +1,53 @@
+    .container {
+    	width: 100%;
+    	padding-left: 0px;
+    	padding-right: 0px;
+    }
+
+    h3 {
+    	font-family: 'Roboto';
+    	font-size: 18px;
+    	font-weight: 700;
+    	margin-top: 0px;
+    }
+
+    h4 {
+    	font-family: 'Dosis';
+    	font-size: 18px;
+    	font-weight: 400;
+    }
+
+    .navbar {
+    	margin-bottom: 0px;
+    }
+
+    .navbar-brand {
+    	font-family: 'Oswald';
+    	text-transform: uppercase;
+    }
+
+    .myButton {
+	    margin: 3px;
+	    padding: 8px;
+	    line-height: 15px;
+    }
+
+    #infoWindow {
+	    background: #FFFFFF;
+	    padding: 20px;
+	    margin-top: 10px;
+	    border-radius: 5px;
+	    font-size: 30px;
+	    position: absolute;
+	    top: 100px;
+	    width: auto;
+	    display: inline;
+	    margin-left: 100px;
+    }
+
+    #myMap {
+	   	width:auto;
+	    height:645px;
+	    background-color: gray;
+	    position: relative;
+    }
