@@ -2,36 +2,14 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 });
 
-var map = L.map('myMap').setView( [40.736913,-73.987513], 12);
+var map = L.map('myMap').setView( [40.738153,-73.913612], 12);
 map.addLayer(layer);
 
-
-$.getJSON('data/subwaystop.geojson', function(data) {
-  // console.log(data);
-
-var subwaystations = {
-    radius: 2,
-    fillColor: "blue",
-    color: "#fff",
-    weight: .5,
-    opacity: 1,
-    fillOpacity: 01
-};
-
-
-L.geoJson(data, {
-    pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, subwaystations);
-    }
-}).addTo(map);
-});
-
-
-var manhattan = [40.748818,-73.874817];
+var manhattan = [40.763121,-73.948288];
 var brooklyn = [40.637925,-73.948288];
 var bronx = [40.841606, -73.874817];
-var queens = [40.701464,-73.788300];
-var statenisland = [40.576413,-74.104156];
+var queens = [40.716298,-73.853874];
+var statenisland = [40.571719,-74.148788];
 
 var panOptions = {
     animate: true,
@@ -122,7 +100,7 @@ var panOptions = {
     }
 
     // console.log(layer.feature.properties.VALUE2);
-    $('#infoWindow').html('<h3>' + '% Vacant Units for Rent' + '</h3>' + '<h4>' + layer.feature.properties.VALUE2 + '</h4>');
+    $('#side').html('<h3>' + '% Vacant Units for Rent' + '</h3>' + '<h4>' + layer.feature.properties.VALUE2 + '</h4>');
   	}
 
   function resetHighlight(e) {
@@ -136,3 +114,22 @@ var panOptions = {
         //click: zoomToFeature
     });
   }
+
+$.getJSON('data/subwaystop.geojson', function(data2) {
+  // console.log(data);
+
+var subwaystations = {
+    radius: 2,
+    fillColor: "blue",
+    color: "#fff",
+    weight: .5,
+    opacity: 1,
+    fillOpacity: 01
+};
+
+L.geoJson(data2, {
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, subwaystations);
+    }
+}).addTo(map);
+});

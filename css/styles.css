@@ -1,7 +1,23 @@
-    .container {
+    body {
+        padding: 0;
+        margin: 0;
+    }  
+
+    html, body {
+        height: 100%;
+        width: 100%;
+    }
+
+    #container {
+        height:100%;
     	width: 100%;
     	padding-left: 0px;
     	padding-right: 0px;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size:15px;
     }
 
     h3 {
@@ -17,13 +33,36 @@
     	font-weight: 400;
     }
 
+    ul {
+        padding-left: 0px;
+        margin-top: 10px;
+        list-style:none;
+          -webkit-padding-start: 10px;
+          -webkit-padding-end: 10px;
+    }
+
+    .col-sm-9, .col-md-9 {
+        padding-left: 0px;
+        padding-right: 0px;
+        position: relative;
+        height: 100%;
+    }
+
     .navbar {
     	margin-bottom: 0px;
+        position:relative;
+        height:60px;
+        width:100%;
+        top: 0;
     }
 
     .navbar-brand {
     	font-family: 'Oswald';
     	text-transform: uppercase;
+    }
+
+    .navbar-right a.dropdown-toggle {
+        height:60px;
     }
 
     .myButton {
@@ -32,22 +71,94 @@
 	    line-height: 15px;
     }
 
-    #infoWindow {
-	    background: #FFFFFF;
-	    padding: 20px;
-	    margin-top: 10px;
-	    border-radius: 5px;
-	    font-size: 30px;
-	    position: absolute;
-	    top: 100px;
-	    width: auto;
-	    display: inline;
-	    margin-left: 100px;
+    #side {
+        background-color: #242426;
+        /*height: 100%;
+        width: 100%;*/
+
+    }
+
+    #colors {
+        display: table-row;
+    }
+
+    .quartile {
+        display: table-cell;
+    }
+
+    .graph {
+        clear: both;
+        overflow: hidden;
+        display: table;
+        height: 22px;
+        width: 100%;
+        border-radius: 3px;
+        -webkit-background-clip: padding;
+        border: 1px solid #b3b3b3;
     }
 
     #myMap {
-	   	width:auto;
-	    height:645px;
-	    background-color: gray;
+	    height: 100%;
+        width: 100%;
 	    position: relative;
+        box-shadow: 0 0 10px rgba(0,0,0,0.55);
     }
+
+    .row {
+        background-color: #242426;
+        margin-left: 0px;
+        margin-right: 0px;
+        color: white;
+        height: 92%;
+        width:auto;
+    }
+
+
+    #infoWindow {
+        background: #FFFFFF;
+        padding: 10px;
+        margin-top: 0px;
+        margin-left: 30px;
+        margin-bottom: 0px;
+        border-radius: 5px;
+        font-size: 10px;
+        position: absolute;
+        bottom: 20px;
+        right: 5px;
+        width: 200px;
+        display: block;
+        opacity: 0.9;
+        color:black;
+        font-family: 'Roboto', sans-serif;
+        height: 100px;
+    }
+
+    #infoWindow li.min {
+        float: left;
+        text-transform: uppercase;
+        
+    }
+
+    #infoWindow li.max {
+        float: right;
+        text-transform: uppercase;
+       
+    }
+
+    #infoWindow ul {
+      list-style:none;
+      -webkit-padding-start: 10px;
+      -webkit-padding-end: 10px;
+
+    }
+
+    #infoWindow h5 {
+        font-size:13px;
+        font-family: 'Roboto';
+        font-weight:700;
+        margin-left: 10px;
+    }
+
+
+
+
