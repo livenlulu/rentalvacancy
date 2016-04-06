@@ -120,11 +120,12 @@ $.getJSON('data/subwaystop.geojson', function(data2) {
 
 var subwaystations = {
     radius: 2,
-    fillColor: "blue",
+    fillColor: "green",
     color: "#fff",
     weight: .5,
     opacity: 1,
-    fillOpacity: 01
+    fillOpacity: 01,
+    
 };
 
 L.geoJson(data2, {
