@@ -134,3 +134,57 @@ L.geoJson(data2, {
     }
 }).addTo(map);
 });
+
+
+
+var renttData = [];
+  rentData[0]={};
+
+nv.addGraph(function() {
+  var chart = nv.models.discreteBarChart()
+    .x(function(d) { return d.label })
+    .y(function(d) { return d.value })
+    .staggerLabels(true)
+    .showValues(true);
+
+  d3.select('#chart svg')
+    .datum(rentData)
+    .transition().duration(500)
+    .call(chart)
+    ;
+
+  nv.utils.windowResize(chart.update);
+
+  return chart;
+});
+
+
+
+
+//Each bar represents a single discrete quantity.
+function rentData() {
+ return  [ 
+    {
+      key: "Cumulative Return",
+      values: [
+        { 
+          "label" : "A Label" ,
+          "value" : 29.765957771107
+        } , 
+        { 
+          "label" : "B Label" , 
+          "value" : 0
+        } , 
+        { 
+          "label" : "C Label" , 
+          "value" : 32.807804682612
+        } , 
+        { 
+          "label" : "D Label" , 
+          "value" : 196.45946739256
+        } 
+      ]
+    }
+  ]
+
+}

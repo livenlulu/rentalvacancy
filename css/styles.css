@@ -7,6 +7,7 @@
     html, body {
         height: 100%;
         width: 100%;
+       
     }
 
     #container {
@@ -15,6 +16,10 @@
     	padding-left: 0px;
     	padding-right: 0px;
         overflow: hidden;
+    }
+
+    .sidebar-cell {
+
     }
 
     h1 {
@@ -55,6 +60,7 @@
         width:100%;
         top: 2px;
         font-family: 'Oswald';
+
        /* background-image: linear-gradient(to bottom, #2b6988 0%, #1f4b61 100%);*/
 }
     }
@@ -64,8 +70,13 @@
     	text-transform: uppercase;
     }
 
+    .navbar-right {
+        margin-top: 5px;
+    }
+
     .navbar-right a.dropdown-toggle {
-        height:60px;
+        top: 0;
+        height:55px;
     }
 
     .myButton {
@@ -163,10 +174,11 @@
     }
 
     #left {
-        overflow:scroll;
+       /* overflow:scroll;*/
         padding-top:10px;
  /*       height: 100%;*/
         float: left;
+        width: 100%;
     }
 
 /*    .col-sm-3 {
@@ -179,3 +191,41 @@
         top:0;
         z-index:130;
     }
+
+
+    text {
+        font: 12px sans-serif;
+    }
+    
+    #chart svg {
+        height: auto;
+        width:auto;
+    }
+
+    g.nvd3 .nv-wrap .nv-discreteBarWithAxes {
+        transform-origin: 0px 0px 0px;
+    }
+
+
+    .tick {
+        display: none;
+    }
+
+    .nv-y text {
+        display: none;
+    }
+
+    .nv-y {
+        display: none;
+    }   
+
+    .nv-zeroLine {
+        display: none;
+    }
+
+
+/*    #chartContainer {
+        border-top: 1px dashed #504B9D;
+        padding-top: 7px;
+        margin-top: 9px;
+    }*/
