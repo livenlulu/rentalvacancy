@@ -174,19 +174,19 @@ function updateChart(f){
     [
         { 
           "label" : "A Label" ,
-          "value" : f.medinc
+          "value" : f.median_rent
         } , 
         { 
           "label" : "B Label" , 
-          "value" : f.medrent_VALUE2
+          "value" : f.median_income
         } , 
         { 
           "label" : "C Label" , 
-          "value" : f.medrent_VALUE2
+          "value" : f.median_income
         } , 
         { 
           "label" : "D Label" , 
-          "value" : f.medinc
+          "value" : f.median_income
         } 
       ]
   
