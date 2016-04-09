@@ -106,7 +106,7 @@ var panOptions = {
     }
 
     // console.log(layer.feature.properties.VALUE2);
-    $('#side').html('<h3>' + layer.feature.properties.VALUE2 + '%' + '</h3>' + '<h4>' + 'of unoccupied units available for rent in New York City.' + '</h4>');
+    $('#side').html('<h3>' + layer.feature.properties.VALUE2 + '%' + '</h3>' + '<h4>' + 'of Unoccupied Units Available for Rent in New York City.' + '</h4>');
   	}
 
   function resetHighlight(e) {
