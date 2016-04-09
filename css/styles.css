@@ -27,8 +27,9 @@
     }
 
     h3 {
-    	font-family: 'Roboto';
-    	font-size: 18px;
+        padding-top: 10px;
+    	font-family: 'Dosis';
+    	font-size: 40px;
     	font-weight: 700;
     	margin-top: 0px;
     }
@@ -72,6 +73,7 @@
 
     .navbar-right {
         margin-top: 5px;
+        font-family: 'Dosis';
     }
 
     .navbar-right a.dropdown-toggle {
