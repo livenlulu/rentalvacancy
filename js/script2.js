@@ -6,6 +6,7 @@ var map = L.map('myMap').setView( [40.738153,-73.913612], 12);
 map.addLayer(layer);
 
 var rentData = [];
+rentData[0]={};
     
 
 var chart;
@@ -69,7 +70,7 @@ var panOptions = {
     	style: style,
     	onEachFeature: onEachFeature
     }).addTo(map);
-    updateChart(data.features.feature.properties)
+    updateChart(data.features[0].properties)
   });
 
 
@@ -156,17 +157,13 @@ L.geoJson(data2, {
 
 
 nv.addGraph(function() {
-  var chart = nv.models.discreteBarChart()
+  chart = nv.models.discreteBarChart()
     .x(function(d) { return d.label })
     .y(function(d) { return d.value })
     .staggerLabels(true)
     .showValues(true);
 
-  d3.select('#chart svg')
-    .datum(rentData)
-    .transition().duration(500)
-    .call(chart)
-    ;
+
 
 
   nv.utils.windowResize(chart.update);
@@ -180,8 +177,8 @@ nv.addGraph(function() {
 //Each bar represents a single discrete quantity.
 function updateChart(f){
 
-  rentData.key = "vacancyrent";
-  rentData.values =
+  rentData[0].key = "vacancyrent";
+  rentData[0].values =
     [
         { 
           "label" : "A Label" ,
@@ -200,6 +197,10 @@ function updateChart(f){
           "value" : f.median_income
         } 
       ]
+    d3.select('#chart svg')
+    .datum(rentData)
+    .transition().duration(500)
+    .call(chart);
   
 }
 
