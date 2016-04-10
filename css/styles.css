@@ -158,14 +158,14 @@
     }
 
     .panel-danger {
-        border-color: #e8e119;
-        color:#555;
+        border-color: #bab40b;
+        
     }
 
     .panel-danger>.panel-heading {
-        background-color: #e8e119;
-        border-color: #e8e119;
-        color: #555;
+        background-color: #bab40b;
+        border-color: #bab40b;
+
     }
 
     #infoWindow {
