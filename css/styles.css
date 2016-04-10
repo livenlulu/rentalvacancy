@@ -24,6 +24,8 @@
 
     a:hover {
         color: #1206bb;
+        text-decoration: none;
+}
     }
 
     h1 {
@@ -322,10 +324,10 @@
     .nv-zeroLine {
         display: none;
     }
-
+/*
 
     chartContainer {
         border-top: 1px dashed #504B9D;
         padding-top: 7px;
         margin-top: 9px;
-    }
+    }*/
