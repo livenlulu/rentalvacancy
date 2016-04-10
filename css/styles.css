@@ -19,11 +19,11 @@
     }
 
     a {
-        color: black;
+        color: #444;
     }
 
     a:hover {
-        color: red;
+        color: #1206bb;
     }
 
     h1 {
@@ -157,6 +157,16 @@
         width:auto;
     }
 
+    .panel-danger {
+        border-color: #e8e119;
+        color:#555;
+    }
+
+    .panel-danger>.panel-heading {
+        background-color: #e8e119;
+        border-color: #e8e119;
+        color: #555;
+    }
 
     #infoWindow {
         background: #FFFFFF;
