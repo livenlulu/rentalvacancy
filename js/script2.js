@@ -168,9 +168,11 @@ nv.addGraph(function() {
     .x(function(d) { return d.label })
     .y(function(d) { return d.value })
     .staggerLabels(true)
-    .showValues(true);
+    .showValues(true)
+    .margin({left:0,right:0})
+    .color(['rgb(215,25,28)','rgb(253,174,97)','rgb(166,217,106)']);
 
-
+    ;
 
 
   nv.utils.windowResize(chart.update);
