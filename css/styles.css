@@ -34,6 +34,7 @@
         font-family: 'Dosis';
         font-size: 18px;
         font-weight: 700;
+        margin-top: 5px;
     }
     h3 {
         padding-top: 10px;
@@ -109,14 +110,49 @@
 
     }
 
+    #line {
+        margin-top:30px;
+        padding-top: 20px;
+        border-top: 1px solid #888;
+        border-width: 80%;
+
+    }
+
+
     .fa-github {
-        font-size: 36px;
+        font-size: 30px;
     }
 
     a .fa-github {
         color:white;
     }
+
     a .fa-github:hover {
+        color: #e8e119;
+    }
+
+    .fa-twitter {
+        font-size: 30px;
+    }
+
+    a .fa-twitter {
+        color:white;
+    }
+
+    a .fa-twitter:hover {
+        color: #e8e119;
+    }
+
+    .fa-envelope {
+        font-size: 27px;
+        vertical-align: top;
+    }
+
+    a .fa-envelope {
+        color:white;
+    }
+
+    a .fa-envelope:hover {
         color: #e8e119;
     }
 
@@ -260,6 +296,10 @@
     #chart svg {
         height: auto;
         width:auto;
+    }
+
+    #chart2 svg {
+        height: 80px;
     }
 
     g.nvd3 .nv-wrap .nv-discreteBarWithAxes {

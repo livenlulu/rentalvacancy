@@ -123,12 +123,12 @@
 .nvd3.nv-bullet .nv-range.nv-s1 { fill: #ddd; }
 .nvd3.nv-bullet .nv-range.nv-s2 { fill: #ccc; }
 .nvd3.nv-bullet .nv-title { font-size: 14px; font-weight: bold; }
-.nvd3.nv-bullet .nv-subtitle { fill: #999; }
+.nvd3.nv-bullet .nv-subtitle { fill: #ffffff; }
 
 
 .nvd3.nv-bullet .nv-range {
     fill: #bababa;
-    fill-opacity: .4;
+    fill-opacity: .1;
 }
 .nvd3.nv-bullet .nv-range:hover {
     fill-opacity: .7;
@@ -276,11 +276,13 @@ svg.nvd3-svg {
 
 
 .nvd3 text {
-    font: normal 12px Arial;
+    font: normal 12px Dosis;
+    color: white;
 }
 
 .nvd3 .title {
-    font: bold 14px Arial;
+    font: bold 14px Dosis;
+    font-color: white;
 }
 
 .nvd3 .nv-background {
