@@ -64,6 +64,9 @@
         position: relative;
         height: 100%;
     }
+    .col-md-3 {
+        height: 100%;
+    }
 
     .navbar {
     	margin-bottom: 0px;
@@ -224,8 +227,14 @@
         border-color: #a5a010;
     }
 
+    .sidebar-cell {
+        
+        display: block;
+        overflow: scroll;
+    }
+
     #left {
-       /* overflow:scroll;*/
+        /*overflow:scroll;*/
         padding-top:10px;
  /*       height: 100%;*/
         float: left;
