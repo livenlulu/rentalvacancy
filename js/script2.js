@@ -56,6 +56,12 @@ var panOptions = {
 //     }
 // }
 
+  $("#about-btn").click(function() {
+  $("#aboutModal").modal("show");
+  $(".navbar-collapse.in").collapse("hide");
+  return false;
+    });
+
   var geojson;
 
   $.getJSON('data/vac.geojson', function(data) {
@@ -106,7 +112,7 @@ var panOptions = {
     }
 
     // console.log(layer.feature.properties.VALUE2);
-    $('#side').html('<h3>' + layer.feature.properties.VALUE2 + '%' + '</h3>' + '<h4>' + 'of Unoccupied Units Available for Rent in New York City - 2015.' + '</h4>');
+    $('#side').html('<h3>' + layer.feature.properties.VALUE2 + '%' + '</h3>' + '<h4>' + 'of Unoccupied Units Available for Rent in this Region - 2015.' + '</h4>');
   	}
 
   function resetHighlight(e) {
@@ -141,6 +147,11 @@ L.geoJson(data2, {
 }).addTo(map);
 });
 
+
+  $(".dropdown-menu li a").click(function(){
+  var selText = $(this).text();
+  $(this).parents('.dropdown').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+  });
 
 
 
