@@ -8,7 +8,6 @@ map.addLayer(layer);
 var rentData = [];
 rentData[0]={};
 var currid=0;
-var med=0;
     
 
 var chart;
@@ -101,9 +100,7 @@ var panOptions = {
 
   function mouseoverFunction(e) {
     var layer = e.target;
-    // med value
-    med = e.target.feature.properties.median_income;
-    console.log(med);
+    console.log(e);
 
     layer.setStyle({
         weight: 5,
@@ -116,8 +113,6 @@ var panOptions = {
     if (!L.Browser.ie && !L.Browser.opera) {
         layer.bringToFront();
     }
-    // try updatechart
-    updateChart(e.target.feature.properties);
 
     // console.log(layer.feature.properties.VALUE2);
     $('#side').html('<h3>' + layer.feature.properties.VALUE2 + '%' + '</h3>' + '<h4>' + 'of Unoccupied Units Available for Rent in this Region - 2015.' + '</h4>');
@@ -187,21 +182,21 @@ function updateChart(f){
   rentData[0].key = "vacancyrent";
   rentData[0].values =
     [
-        /*{ 
+        { 
           "label" : "A Label" ,
           "value" : f.median_rent
-        } ,*/ 
+        } , 
         { 
           "label" : "B Label" , 
-          "value" : f.median_income / 12
+          "value" : f.median_income
         } , 
         { 
           "label" : "C Label" , 
-          "value" : f.median_rent
+          "value" : f.median_income
         } , 
         { 
           "label" : "D Label" , 
-          "value" : 5000
+          "value" : f.median_income
         } 
       ]
     d3.select('#chart svg')
