@@ -102,8 +102,8 @@ var panOptions = {
   function mouseoverFunction(e) {
     var layer = e.target;
     // med value
-    med = e.target.feature.properties.median_income;
-    console.log(med);
+    //med = e.target.feature.properties.median_income;
+    //console.log(med);
 
     layer.setStyle({
         weight: 5,
@@ -135,34 +135,35 @@ var panOptions = {
     });
   }
 
-$.getJSON('data/subwaystop.geojson', function(data2) {
-  // console.log(data);
+//subway stations
+// $.getJSON('data/subwaystop.geojson', function(data2) {
+//   // console.log(data);
 
-var subwaystations = {
-    radius: 2,
-    fillColor: "green",
-    color: "#fff",
-    weight: .5,
-    opacity: 1,
-    fillOpacity: 01,
+// var subwaystations = {
+//     radius: 2,
+//     fillColor: "green",
+//     color: "#fff",
+//     weight: .5,
+//     opacity: 1,
+//     fillOpacity: 01,
     
-};
+// };
 
-L.geoJson(data2, {
-    pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, subwaystations);
-    }
-}).addTo(map);
-});
+// L.geoJson(data2, {
+//     pointToLayer: function (feature, latlng) {
+//         return L.circleMarker(latlng, subwaystations);
+//     }
+// }).addTo(map);
+// });
 
-
+//dropdown scroll
   $(".dropdown-menu li a").click(function(){
   var selText = $(this).text();
   $(this).parents('.dropdown').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
   });
 
 
-
+//bar chart
 nv.addGraph(function() {
   chart = nv.models.discreteBarChart()
     .x(function(d) { return d.label })
@@ -170,17 +171,18 @@ nv.addGraph(function() {
     .staggerLabels(true)
     .showValues(true)
     .margin({left:0,right:0})
-    .color(['rgb(215,25,28)','rgb(253,174,97)','rgb(166,217,106)']);
-
+    .color(['rgb(77,175,74)','rgb(55,126,184)','rgb(228,26,28)'])
+    .valueFormat(function(d){
+        return Math.round(d * 10)/10;
+      });
     ;
+
 
 
   nv.utils.windowResize(chart.update);
 
   return chart;
 });
-
-
 
 
 //Each bar represents a single discrete quantity.
@@ -194,16 +196,16 @@ function updateChart(f){
           "value" : f.median_rent
         } ,*/ 
         { 
-          "label" : "B Label" , 
+          "label" : "Median Monthly Income" , 
           "value" : f.median_income / 12
         } , 
         { 
-          "label" : "C Label" , 
-          "value" : f.median_rent
+          "label" : "Median Monthly Rent" , 
+          "value" : f.median_rent 
         } , 
         { 
-          "label" : "D Label" , 
-          "value" : 5000
+          "label" : "30% Of A Household's Total Income" , 
+          "value" : f.median_income /12 * .3
         } 
       ]
     d3.select('#chart svg')
@@ -214,27 +216,27 @@ function updateChart(f){
 }
 
 
+//bulletchart
+// nv.addGraph(function() {  
+//   var chart2 = nv.models.bulletChart();
 
-nv.addGraph(function() {  
-  var chart2 = nv.models.bulletChart();
+//   d3.select('#chart2 svg')
+//       .datum(exampleData())
+//       .transition().duration(1000)
+//       .call(chart2);
 
-  d3.select('#chart2 svg')
-      .datum(exampleData())
-      .transition().duration(1000)
-      .call(chart2);
-
-  return chart2;
-});
+//   return chart2;
+// });
 
 
-function exampleData() {
-  return {
-    "title":"Revenue",    //Label the bullet chart
-    "subtitle":"US$",   //sub-label for bullet chart
-    "ranges":[150,225,300],  //Minimum, mean and maximum values.
-    "measures":[220],    //Value representing current measurement (the thick blue line in the example)
-    "markers":[250]      //Place a marker on the chart (the white triangle marker)
-  };
-}
+// function exampleData() {
+//   return {
+//     "title":"Revenue",    //Label the bullet chart
+//     "subtitle":"US$",   //sub-label for bullet chart
+//     "ranges":[150,225,300],  //Minimum, mean and maximum values.
+//     "measures":[220],    //Value representing current measurement (the thick blue line in the example)
+//     "markers":[250]      //Place a marker on the chart (the white triangle marker)
+//   };
+// }
 
 
