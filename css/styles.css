@@ -7,6 +7,7 @@
     html, body {
         height: 100%;
         width: 100%;
+        font-size:13px;
        
     }
 
@@ -117,9 +118,7 @@
         padding-top: 20px;
         border-top: 1px solid #888;
         border-width: 80%;
-
     }
-
 
     .fa-github {
         font-size: 30px;
@@ -145,16 +144,16 @@
         color: #e8e119;
     }
 
-    .fa-envelope {
-        font-size: 27px;
+    .fa-facebook {
+        font-size: 30px;
         vertical-align: top;
     }
 
-    a .fa-envelope {
+    a .fa-facebook {
         color:white;
     }
 
-    a .fa-envelope:hover {
+    a .fa-facebook:hover {
         color: #e8e119;
     }
 
@@ -225,7 +224,7 @@
         opacity: 0.9;
         color:black;
         font-family: 'Roboto', sans-serif;
-        height: 100px;
+        height: 110px;
     }
 
     #infoWindow li.min {
@@ -309,15 +308,18 @@
     }
 
 
-    .tick {
+/*    .nv-x.tick {
         display: none;
     }
-
-    .nv-y text {
+*/
+/*    .nv-y text {
         display: none;
-    }
+    }*/
 
     .nv-y {
+        display: none;
+    }   
+    .nv-x {
         display: none;
     }   
 
@@ -325,6 +327,9 @@
         display: none;
     }
 
+    #sq1 {
+        color: ##4daf4a;
+    }
 /*
     chartContainer {
         border-top: 1px dashed #504B9D;
