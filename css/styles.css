@@ -64,6 +64,7 @@
         position: relative;
         height: 100%;
     }
+
     .col-md-3 {
         height: 100%;
     }
@@ -269,16 +270,10 @@
     }
 
     #left {
-        /*overflow:scroll;*/
         padding-top:10px;
- /*       height: 100%;*/
         float: left;
         width: 100%;
     }
-
-/*    .col-sm-3 {
-        height:100%;
-    }*/
 
     .navbar-default {
         position: fixed;
