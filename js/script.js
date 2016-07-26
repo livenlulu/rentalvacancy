@@ -136,7 +136,7 @@ var panOptions = {
     });
   }
 
-//subway stations
+// subway stations
 // $.getJSON('data/subwaystop.geojson', function(data2) {
 //   // console.log(data);
 
