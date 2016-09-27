@@ -1,4 +1,4 @@
-<kbd><a href="http://livenlulu.github.io/rentalvacancy/"><img src="data/vacantunits" style="max-width:100%; width: 600px;"/></a>
+<kbd><a href="http://livenlulu.github.io/rentalvacancy/"><img src="data/vacantunits.png" style="max-width:100%; width: 600px;"/></a>
 </kbd>
 
 ## [Vacant Units for Rent in NYC Demo](http://livenlulu.github.io/rentalvacancy/)
