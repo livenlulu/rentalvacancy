@@ -1,8 +1,8 @@
 var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png',{
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+  attribution: ''
 });
 
-var map = L.map('myMap').setView( [40.738153,-73.913612], 12);
+var map = L.map('myMap', { attributionControl: false}).setView( [40.738153,-73.913612], 12);
 map.addLayer(layer);
 
 var rentData = [];
@@ -78,7 +78,7 @@ var panOptions = {
 
 
   function getColor(d) {
-    return d > 90 ? '#0000cc' :
+    return d > 90 ? '#900000' :
            d > 80  ? '#BD0026' :
            d > 60  ? '#E31A1C' :
            d > 50  ? '#FC4E2A' :
@@ -121,7 +121,7 @@ var panOptions = {
     updateChart(e.target.feature.properties);
 
     // console.log(layer.feature.properties.VALUE2);
-    $('#side').html('<h3>' + layer.feature.properties.VALUE2 + '%' + '</h3>' + '<h4>' + 'of Unoccupied Units Available for Rent in this Region - 2015.' + '</h4>');
+    $('#side').html('<h4><b><font color="#e8e119">' + layer.feature.properties.VALUE2 + '%' +'</font></b> of unoccupied units available to rent on this block.' + '</h4>');
   	}
 
   function resetHighlight(e) {
