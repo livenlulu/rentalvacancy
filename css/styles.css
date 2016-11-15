@@ -186,6 +186,7 @@
         color:black;
         font-family: 'Roboto', sans-serif;
         height: 90px;
+        z-index: 20;
     }
 
     #infoWindow li.min {
