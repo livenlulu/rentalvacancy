@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>Vacant Units for Rent</title>
+    <title>NYC Vacant Units for Rent</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-OiWEn8WwtH+084y4yW2YhhH6z/qTSecHZuk/eiWtnvLtU+Z8lpDsmhOKkex6YARr" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
@@ -15,7 +15,6 @@
 
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="./data/nvd3.js"></script>
-
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="data/nvd3.css" type="text/css">
   </head>
@@ -30,7 +29,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Vacant Units for Rent, NYC</a>
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;Vacant Units for Rent, NYC</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -62,10 +61,10 @@
       </div>
     </nav>
 
-  <div id="container">
+<!--   <div id="container"> -->
     <div class="row" style="border-top: 2px solid black;">
     
-      <div class="col-sm-3 col-md-3 sidebar-cell">
+      <div id="lef2">
         
           <div id="left">
           
@@ -73,8 +72,8 @@
            
  -->
             <div id="side">
-              <h3>44.96%</h3>
-              <h4>of Unoccupied Units Available for Rent in New York City - 2015.</h4>
+              
+              <h4><b><font color="#e8e119">44.96%</font></b> of unoccupied units available to rent in New York City.</h4>
             </div>
 
             
@@ -97,7 +96,7 @@
               </div> -->
 
               <div id="line">
-                <h2><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>&nbsp;DOWNLOAD</h2>
+                <h2><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>&nbsp;DATA DOWNLOAD</h2>
 
                 <a href="data/download/rentalvacancy.geojson" id="alink"><button type="button" class="btn btn-primary">GEOJSON</a></button>
                 <a href="data/download/rentalvacancy.csv" id="alink"><button type="button" class="btn btn-primary">CSV</a></button>
@@ -115,13 +114,13 @@
           </div>
       </div>
 
-      <div class="col-xs-14 col-sm-9 col-md-9">
+      <div id="rig2" >
         <div id="myMap"></div>
       </div>
     </div>
 
       <div id="infoWindow" >
-        <h5>RENTAL VACANCY RATE <br>AT BLOCK LEVEL</h5>
+        <h5>VACANCY RATE</h5>
           <ul>
             <li class="graph">
               <div id="colors">
@@ -132,11 +131,11 @@
                 <div class="quartile" style="background-color:#FC4E2A"></div>
                 <div class="quartile" style="background-color:#E31A1C"></div>
                 <div class="quartile" style="background-color:#BD0026"></div>
-                <div class="quartile" style="background-color:#0000cc"></div>
+                <div class="quartile" style="background-color:#900000"></div>
               </div>
             </li>
-            <li class="min">20%</li>
-            <li class="max">100%</li><br><br>
+            <li class="min">Low</li>
+            <li class="max">High</li><br><br>
           </ul>
       </div>
 
@@ -162,8 +161,6 @@
                     <div class="panel-heading">Credits and Acknowledgments</div>
                     <ul class="list-group">
                       <li class="list-group-item"><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>, <a href="http://leafletjs.com/" target="_blank">Leaflet</a>, <a href="http://nvd3.org/index.html" target="_blank">NVD3</a>. </li>
-                      
-                      <li class="list-group-item">Thank you <a href="https://twitter.com/chris_whong?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">Chris Whong</a> for an excellent course and for being an inspirational professor! <i class="fa fa-thumbs-o-up"></i> </a></li>
 
                       <li class="list-group-item">Comments or suggestions: Contact <a href="http://www.lucykang.com/contact.html" target="_blank">Lucy Kang</a>. <i class="fa fa-angellist"></i></li>
                     </ul>
@@ -174,7 +171,8 @@
           </div>
         </div>
       </div>
-    </div>
+<!--     </div> -->
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
