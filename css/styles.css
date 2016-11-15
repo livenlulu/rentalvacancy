@@ -162,7 +162,7 @@
 
     .graph {
         clear: both;
-        overflow: hidden;
+   /*     overflow: hidden;*/
         display: table;
         height: 22px;
         width: 100%;
@@ -262,6 +262,8 @@
         float: left;
         width: 100%;
         overflow: scroll;
+        display: block;
+
     }
 
     .navbar-default {
@@ -316,9 +318,8 @@
         padding-left:15px;
         padding-right: 15px;
         position: relative;
-       /* overflow: scroll;*/
-
         width: 30%;
+        z-index: 12;
         background-color: #242426;
     }
 
@@ -326,7 +327,6 @@
         width: 70%;
         float: right;
         height:100%;
-        
         display: block;  
         z-index: 10;  
     }
@@ -338,7 +338,7 @@
         padding-left:15px;
         padding-right: 15px;
         position: relative;
- 
+        z-index: 12;
         width: 40%;
         background-color: #242426;
     }
