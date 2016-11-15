@@ -143,14 +143,6 @@
         border: 1px solid #b3b3b3;
     }
 
-    #myMap {
-	    height: 100%;
-        width: 100%;
-
-	    position: relative;
-        box-shadow: 0 0 10px rgba(0,0,0,0.55);
-    }
-
     .row {
         background-color: #242426;
         margin-left: 0px;
@@ -295,10 +287,20 @@
 
     #rig2 {
         width: 70%;
-        float: left;
+        float: right;
         height:100%;
-        position: relative;
+       /* position: fixed;*/
     }
+
+
+    #myMap {
+        height: 100%;
+        width: 100%;
+        float: right;
+        position: fixed;
+        box-shadow: 0 0 10px rgba(0,0,0,0.55);
+    }
+
 
     .navbar {
         margin-bottom: 0px;
