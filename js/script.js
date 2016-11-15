@@ -2,7 +2,10 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/
   attribution: ''
 });
 
-var map = L.map('myMap', { attributionControl: false}).setView( [40.738153,-73.913612], 12);
+var map = L.map('myMap', { 
+  attributionControl: false,
+  tap:false
+}).setView( [40.738153,-73.913612], 12);
 map.addLayer(layer);
 
 var rentData = [];
